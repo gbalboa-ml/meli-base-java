@@ -3,6 +3,7 @@ package ar.com.mercadolibre.ejLibreria;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.LongToIntFunction;
+import java.util.function.Predicate;
 
 public class Libreria {
 
@@ -33,15 +34,28 @@ public class Libreria {
     private boolean libroEstaAlquilado(Alquilable alquilable) {
 
 
-        Alquiler result = this.alquileres.stream()
-                .filter(alquiler -> alquiler.getAlquilable().equals(alquilable))
-                .filter(alquiler -> alquiler.getFechaDevolucion() != null).findFirst().orElse(null);
+        Alquiler result = buscarAlquiler(alquilable);
 
         return result != null;
     }
 
-   /* private Alquiler buscarAlquiler(Libro libro) {
+    private Alquiler buscarAlquiler(Alquilable alquilable)
+    {
 
+        Alquiler result = null;
+        try {
+            result = this.alquileres.stream()
+                    .filter(getPredicate(alquilable)).findFirst().get();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-    }*/
+        return result;
+
+    }
+
+    public Predicate<Alquiler> getPredicate (Alquilable alquilable)
+    {
+         return alquiler -> alquiler.getAlquilable().equals(alquilable) && alquiler.getFechaDevolucion() != null;
+    }
 }
