@@ -1,4 +1,4 @@
-package ar.com.mercadolibre;
+package ar.com.mercadolibre.tragamonedasTest;
 
 import ar.com.mercadolibre.ejTragamonedas.Tambor;
 
@@ -8,16 +8,10 @@ import static java.lang.Math.abs;
 
 public class TamborMock extends Tambor {
 
-    private Integer numeroActual;
-
     public TamborMock(Integer numero) {
         numeroActual = numero;
     }
 
     public void girar() {
    }
-
-    public Integer obtenerPosicion() {
-        return numeroActual;
-    }
 }

@@ -1,6 +1,5 @@
 package ar.com.mercadolibre.tragamonedasTest;
 
-import ar.com.mercadolibre.TamborMock;
 import ar.com.mercadolibre.ejTragamonedas.Tambor;
 import ar.com.mercadolibre.ejTragamonedas.Tragamonedas;
 import org.assertj.core.api.Assertions;

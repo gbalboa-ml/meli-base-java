@@ -6,7 +6,7 @@ import static java.lang.Math.abs;
 
 public class Tambor {
 
-    private Integer numeroActual;
+    protected Integer numeroActual;
 
     public void girar() {
         Random r = new Random();
