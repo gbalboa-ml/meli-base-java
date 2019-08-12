@@ -61,7 +61,7 @@ public class EnviosTest {
         Despachador.SelectorDeVehiculo selectorDeVehiculosMock = mock(Despachador.SelectorDeVehiculo.class);
         when(selectorDeVehiculosMock.seleccionarVehiculo(any(Integer.class))).thenReturn(Transportes.Auto);
 
-        //Assertions.assertThat(selectorDeVehiculosMock.seleccionarVehiculo(50)).isEqualTo(Transportes.Auto);
+        Assertions.assertThat(selectorDeVehiculosMock.seleccionarVehiculo(50)).isEqualTo(Transportes.Auto);
 
 
     }
