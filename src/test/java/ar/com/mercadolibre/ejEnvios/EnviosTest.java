@@ -51,7 +51,7 @@ public class EnviosTest {
         Assertions.assertThat(Despachador.CalculadorDeCostos.calcularCostoDeEnvio(paquetes4)).isEqualTo(110);
     }
 
-    @Test
+/*    @Test
     public void generarEnviosCorrectamente() throws Exception {
         List<Integer> paquetes1 = new ArrayList<Integer>(Arrays.asList(5,10,19,20));
         List<Integer> paquetes2 = new ArrayList<Integer>(Arrays.asList(5,8,19,32,29));
@@ -64,5 +64,5 @@ public class EnviosTest {
         Assertions.assertThat(selectorDeVehiculosMock.seleccionarVehiculo(50)).isEqualTo(Transportes.Auto);
 
 
-    }
+    }*/
 }
